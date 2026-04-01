@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Antonio Pulido</title>
+  <meta name="description" content="Antonio Pulido is a full stack web developer with 6+ years of experience based in Miami, FL. Trained at Wyncode Academy, currently working with UXCONSUL.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* About-page specific styles */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .about-layout {
+        grid-template-columns: 1fr 340px;
+      }
+    }
+
+    /* .profile-photo is defined in style.css */
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: var(--space-6);
+      align-items: start;
+    }
+
+    @media (max-width: 479px) {
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+      }
+    }
+
+    .timeline-item__date {
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      color: var(--color-primary);
+      padding-top: 3px;
+    }
+
+    .timeline-item__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-1);
+    }
+
+    .timeline-item__sub {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+
+    @media (min-width: 480px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .skills-group__label {
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-4);
+    }
+
+    .skills-group__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+      padding: var(--space-5);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .cert-item__icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .cert-item__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-1);
+    }
+
+    .cert-item__meta {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="nav-logo" aria-label="Antonio Pulido — Home">AP</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html" aria-current="page" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== ABOUT HERO ===== -->
+    <section class="hero hero--short" id="about">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">About Me</p>
+          <h1 class="hero__title">Antonio Pulido</h1>
+          <p class="hero__sub">Full Stack Web Developer. Miami-based. Builder by instinct.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BIO + PHOTO ===== -->
+    <section class="section section--no-top" id="bio">
+      <div class="container">
+        <div class="about-layout">
+          <!-- Left: text -->
+          <div>
+            <h2 class="heading--spaced">Who I Am</h2>
+            <p class="bio-text">
+              Antonio Pulido is a full stack web developer with over six years of hands-on experience building for the web. Trained at Wyncode Academy and currently working with UXCONSUL, he has shipped projects across e-commerce, browser tooling, crypto tracking, and AI chat interfaces.
+            </p>
+            <p class="bio-text">
+              His stack spans React, Ruby on Rails, JavaScript, and modern API integrations including OpenAI. He brings a builder's mindset to every project — practical, direct, and focused on working software.
+            </p>
+            <p class="bio-text--muted">
+              Clean code. Real results. No fluff.
+            </p>
+          </div>
+
+          <!-- Right: profile photo -->
+          <div>
+            <!-- Replace with your actual profile photo: <img src="assets/images/profile.jpg" alt="Antonio Pulido"> -->
+            <div class="profile-photo" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE / TIMELINE ===== -->
+    <section class="section section--surface" id="experience">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Experience</h2>
+          <p class="section__subtitle">Where I've worked and what I've studied.</p>
+        </div>
+        <div class="timeline" role="list">
+
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-item__date">2018 — Present</span>
+            <div>
+              <p class="timeline-item__title">AP Web Development</p>
+              <p class="timeline-item__sub">Freelance Full Stack Developer · Miami, FL<br>Building custom web apps, AI integrations, and e-commerce solutions for clients across industries.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-item__date">Current</span>
+            <div>
+              <p class="timeline-item__title">UXCONSUL</p>
+              <p class="timeline-item__sub">Full Stack Developer · Miami–Fort Lauderdale Area<br>Custom Shopify theme development using Liquid and JavaScript, UI/UX implementation, and API integrations.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" role="listitem">
+            <span class="timeline-item__date">Feb 2018</span>
+            <div>
+              <p class="timeline-item__title">Wyncode Academy</p>
+              <p class="timeline-item__sub">Full Stack Web Immersive Graduate · Miami, FL<br>Intensive bootcamp covering Ruby on Rails, JavaScript, React, and modern web development practices. Credential: MIAC21.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Certifications</h2>
+        </div>
+        <div class="cert-list">
+
+          <div class="cert-item">
+            <span class="cert-item__icon" aria-hidden="true">&#127942;</span>
+            <div>
+              <p class="cert-item__title">MCSA: Windows Server 2012 R2</p>
+              <p class="cert-item__meta">Microsoft · Issued May 2015</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <span class="cert-item__icon" aria-hidden="true">&#127942;</span>
+            <div>
+              <p class="cert-item__title">MCP — Microsoft Certified Professional</p>
+              <p class="cert-item__meta">Microsoft · Issued Feb 2015</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS GRID ===== -->
+    <section class="section section--surface section--skills-top" id="skills">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__subtitle">Grouped by category.</p>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skills-group">
+            <p class="skills-group__label">Frontend</p>
+            <div class="skills-group__tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">jQuery</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Liquid / Shopify</span>
+              <span class="tag">Chrome Extensions</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group__label">Backend</p>
+            <div class="skills-group__tags">
+              <span class="tag">Ruby on Rails</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Ruby</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">OpenAI API</span>
+              <span class="tag">Stripe</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <p class="skills-group__label">Tools &amp; Platforms</p>
+            <div class="skills-group__tags">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Heroku</span>
+              <span class="tag">Cloudinary</span>
+              <span class="tag">Figma / Wireframing</span>
+              <span class="tag">VS Code</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section section--centered" aria-label="Contact call to action">
+      <div class="container">
+        <h2 class="heading--spaced">Let's work together.</h2>
+        <p class="cta-text">Have a project or role in mind? I'm open to freelance work and interesting collaborations.</p>
+        <a href="contact.html" class="btn-primary">Get In Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="https://github.com/apulido305" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/apulido305" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:admnslog@gmail.com">admnslog@gmail.com</a>
+      </nav>
+      <p class="footer__copy">&copy; <span id="year"></span> Antonio Pulido. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

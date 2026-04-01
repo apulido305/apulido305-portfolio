@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Antonio Pulido</title>
+  <meta name="description" content="Get in touch with Antonio Pulido — full stack developer based in Miami, FL. Available for freelance projects and collaborations.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Contact-page specific styles */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-16);
+      }
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-8);
+    }
+
+    .contact-info__intro {
+      color: var(--color-text-muted);
+      line-height: var(--line-height-relaxed);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .contact-link-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      padding: var(--space-5);
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    .contact-link-item:hover {
+      border-color: rgba(0, 229, 255, 0.3);
+      background-color: var(--color-surface-raised);
+      transform: translateX(4px);
+    }
+
+    .contact-link-item__icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      width: 28px;
+      text-align: center;
+    }
+
+    .contact-link-item__label {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-bottom: 2px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .contact-link-item__value {
+      font-size: var(--text-base);
+      color: var(--color-text);
+      font-weight: 500;
+    }
+
+    .form-panel {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+    }
+
+    .form-panel h2 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-6);
+    }
+
+    .contact-form {
+      max-width: none;
+    }
+
+    .response-note {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: var(--space-4);
+      font-style: italic;
+    }
+
+    /* Success state — shown by JS after submit */
+    .form-success-message {
+      display: none;
+      text-align: center;
+      padding: var(--space-12) var(--space-8);
+    }
+
+    .form-success-message__icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-4);
+    }
+
+    .form-success-message h3 {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-3);
+      color: #4ade80;
+    }
+
+    .form-success-message p {
+      color: var(--color-text-muted);
+      margin-inline: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="nav-logo" aria-label="Antonio Pulido — Home">AP</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page" class="active">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== CONTACT HERO ===== -->
+    <section class="hero hero--compact" id="contact">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Get In Touch</p>
+          <h1 class="hero__title">Let's Build Something.</h1>
+          <p class="hero__sub">Have a project, a question, or just want to say hi? I'm always open to good conversations about interesting work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT LAYOUT ===== -->
+    <section class="section section--no-top" id="contact-section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Left: contact info -->
+          <div class="contact-info">
+            <div>
+              <h2 class="heading--spaced">Direct Contact</h2>
+              <p class="contact-info__intro">Prefer to reach out directly? Use any of the channels below. I'm most responsive via email.</p>
+            </div>
+
+            <nav class="contact-links" aria-label="Contact links">
+
+              <a href="mailto:admnslog@gmail.com" class="contact-link-item" aria-label="Send email to admnslog@gmail.com">
+                <span class="contact-link-item__icon" aria-hidden="true">&#9993;</span>
+                <div>
+                  <p class="contact-link-item__label">Email</p>
+                  <p class="contact-link-item__value">admnslog@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://github.com/apulido305" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile for apulido305">
+                <span class="contact-link-item__icon" aria-hidden="true">&#128736;</span>
+                <div>
+                  <p class="contact-link-item__label">GitHub</p>
+                  <p class="contact-link-item__value">github.com/apulido305</p>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/apulido305" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="View LinkedIn profile for apulido305">
+                <span class="contact-link-item__icon" aria-hidden="true">&#128101;</span>
+                <div>
+                  <p class="contact-link-item__label">LinkedIn</p>
+                  <p class="contact-link-item__value">linkedin.com/in/apulido305</p>
+                </div>
+              </a>
+
+            </nav>
+
+            <div class="availability-card">
+              <p class="availability-card__label">Availability</p>
+              <p class="availability-card__text">Available for freelance projects. Based in Miami, FL. Works with clients remotely worldwide.</p>
+            </div>
+          </div>
+
+          <!-- Right: contact form -->
+          <div class="form-panel">
+            <h2>Send a Message</h2>
+
+            <!-- Success state — revealed by JS on submit -->
+            <div class="form-success-message" id="form-success" role="alert" aria-live="polite">
+              <div class="form-success-message__icon" aria-hidden="true">&#10003;</div>
+              <h3>Thanks! I'll be in touch.</h3>
+              <p>Your message has been received. Expect a reply within 1–2 business days.</p>
+            </div>
+
+            <!-- To enable real email delivery, replace action="#" with your Formspree endpoint: https://formspree.io -->
+            <form
+              id="contact-form"
+              class="contact-form"
+              action="#"
+              method="POST"
+              novalidate
+              aria-label="Contact form"
+            >
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  autocomplete="name"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  autocomplete="email"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="What's this about?"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell me about your project or idea..."
+                  required
+                  rows="6"
+                ></textarea>
+              </div>
+
+              <div>
+                <button type="submit" class="btn-primary btn-primary--full">
+                  Send Message
+                </button>
+                <p class="response-note">Response within 1–2 business days.</p>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="https://github.com/apulido305" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/apulido305" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:admnslog@gmail.com">admnslog@gmail.com</a>
+      </nav>
+      <p class="footer__copy">&copy; <span id="year"></span> Antonio Pulido. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

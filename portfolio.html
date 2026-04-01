@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Antonio Pulido</title>
+  <meta name="description" content="Projects by Antonio Pulido — AI chat interfaces, Chrome extensions, e-commerce platforms, crypto trackers, and more. Full stack work in React, Rails, and JavaScript.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="nav-logo" aria-label="Antonio Pulido — Home">AP</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" aria-current="page" class="active">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="hero hero--medium" id="portfolio">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Selected Projects</p>
+          <h1 class="hero__title">My Work</h1>
+          <p class="hero__sub">A collection of projects I've built — from AI tooling and e-commerce platforms to browser extensions and crypto trackers. Each one is production-grade code, not a tutorial.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT GRID ===== -->
+    <section class="section section--no-top" id="projects">
+      <div class="container">
+        <h2 class="section-heading">Projects</h2>
+        <div class="project-grid">
+
+          <!-- Project 1: GPT React Chat -->
+          <article class="card" aria-label="GPT React Chat project">
+            <h3 class="card__title">GPT React Chat</h3>
+            <p class="card__description">AI-powered chat interface integrating the OpenAI API with a React frontend. Features a dynamic conversational UI with real-time message streaming and clean component architecture.</p>
+            <div class="card__tags">
+              <span class="tag">React</span>
+              <span class="tag">OpenAI API</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="card__links">
+              <!-- Replace with: https://github.com/apulido305/gpt-react-intercom when repo URL is confirmed -->
+              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View GPT React Chat source code on GitHub">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 2: Wynwalls -->
+          <article class="card" aria-label="Wynwalls Chrome extension project">
+            <h3 class="card__title">Wynwalls</h3>
+            <p class="card__description">A Chrome extension that surfaces Wynwood street art in Miami on every new tab page. Combines local art discovery with browser customization — built for the Miami community.</p>
+            <div class="card__tags">
+              <span class="tag">Chrome Extension</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">APIs</span>
+            </div>
+            <div class="card__links">
+              <!-- Replace with: https://github.com/apulido305/wynwalls when repo URL is confirmed -->
+              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Wynwalls source code on GitHub">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 3: LottaCoin -->
+          <article class="card" aria-label="LottaCoin crypto tracker project">
+            <h3 class="card__title">LottaCoin</h3>
+            <p class="card__description">Crypto price tracker with custom alert functionality. Pulls live market data and lets users set price thresholds for notifications. Clean, fast, and data-driven.</p>
+            <div class="card__tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Ruby</span>
+              <span class="tag">APIs</span>
+              <span class="tag">Live Data</span>
+            </div>
+            <div class="card__links">
+              <!-- Replace with: https://github.com/apulido305/LottaCoin when repo URL is confirmed -->
+              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View LottaCoin source code on GitHub">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 4: Trio Project -->
+          <article class="card" aria-label="Trio Project — Urban Miami e-commerce">
+            <h3 class="card__title">Trio Project — Urban Miami</h3>
+            <p class="card__description">A collaborative three-person e-commerce platform built on Rails. Features Stripe payment integration, Cloudinary image hosting, and a full product and user management system.</p>
+            <div class="card__tags">
+              <span class="tag">Ruby on Rails</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Stripe</span>
+              <span class="tag">Cloudinary</span>
+              <span class="tag">jQuery</span>
+            </div>
+            <div class="card__links">
+              <!-- Replace with: https://github.com/apulido305/trio-project when repo URL is confirmed -->
+              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Trio Project source code on GitHub">GitHub</a>
+            </div>
+          </article>
+
+          <!-- Project 5: Portfolio Site -->
+          <article class="card" aria-label="Portfolio site project">
+            <h3 class="card__title">Portfolio Site</h3>
+            <p class="card__description">This portfolio — designed and built from scratch with a dark minimal aesthetic. Static HTML/CSS with a focus on performance, accessibility, and clean code. No frameworks, no bloat.</p>
+            <div class="card__tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="card__links">
+              <!-- Replace with: https://github.com/apulido305/portfolio-site when repo URL is confirmed -->
+              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Portfolio Site source code on GitHub">GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section section--no-top section--centered" aria-label="Contact call to action">
+      <div class="container">
+        <div class="divider"></div>
+        <p class="section-heading heading--spaced">Have a project in mind?</p>
+        <p class="cta-text">I'm available for freelance work. Let's talk about what you're building.</p>
+        <a href="contact.html" class="btn-primary">Get In Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="https://github.com/apulido305" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/apulido305" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:admnslog@gmail.com">admnslog@gmail.com</a>
+      </nav>
+      <p class="footer__copy">&copy; <span id="year"></span> Antonio Pulido. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
