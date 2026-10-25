@@ -3,32 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio — Antonio Pulido</title>
-  <meta name="description" content="Projects by Antonio Pulido — AI chat interfaces, Chrome extensions, e-commerce platforms, crypto trackers, and more. Full stack work in React, Rails, and JavaScript.">
+  <title>Portfolio — Antonio Pulido | Projects, Demos &amp; Apps</title>
+  <meta name="description" content="Projects by Antonio Pulido — Moggers digital closet, Mr. Pulido study games, AI product comparison, React chat, Shopify and WordPress work, client demos, and more. Full stack work in React, Node.js, TypeScript, Python, and Ruby.">
   <link rel="icon" href="data:,">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .project-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--color-border); }
+    .project-row { display: grid; grid-template-columns: 1fr; gap: var(--space-2); padding: var(--space-5) 0; border-bottom: 1px solid var(--color-border); }
+    @media (min-width: 768px) { .project-row { grid-template-columns: 220px 1fr auto; gap: var(--space-6); align-items: start; } }
+    .project-row__name { font-family: var(--font-heading); font-weight: 700; }
+    .project-row__name a { color: var(--color-text); }
+    .project-row__name a:hover { color: var(--color-primary); }
+    .project-row__desc { color: var(--color-text-muted); line-height: 1.6; }
+    .project-row__meta { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-muted); white-space: nowrap; }
+    .note { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+  </style>
 </head>
 <body>
 
   <a href="#main" class="sr-only">Skip to main content</a>
 
-  <!-- ===== NAVIGATION ===== -->
   <header>
     <nav class="nav" aria-label="Main navigation">
       <div class="container">
         <a href="index.html" class="nav-logo" aria-label="Antonio Pulido — Home">AP</a>
         <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="nav-links" role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html" aria-current="page" class="active">Portfolio</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -37,100 +46,111 @@
 
   <main id="main">
 
-    <!-- ===== PAGE HERO ===== -->
     <section class="hero hero--medium" id="portfolio">
       <div class="container">
         <div class="hero__content">
-          <p class="hero__eyebrow">Selected Projects</p>
+          <p class="hero__eyebrow">Selected Projects · 10+ Years</p>
           <h1 class="hero__title">My Work</h1>
-          <p class="hero__sub">A collection of projects I've built — from AI tooling and e-commerce platforms to browser extensions and crypto trackers. Each one is production-grade code, not a tutorial.</p>
+          <p class="hero__sub">Production apps, client demos, and classroom tools I built — from AI product comparison and a digital closet app to study games used by real students. Each card has a summary and a link. The full archive is at the bottom.</p>
+          <div class="hero__actions">
+            <a href="resume.html" class="btn-primary">View My Resume</a>
+            <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer">All Repos on GitHub</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== PROJECT GRID ===== -->
     <section class="section section--no-top" id="projects">
       <div class="container">
-        <h2 class="section-heading">Projects</h2>
+        <h2 class="section-heading">Featured Projects</h2>
         <div class="project-grid">
 
-          <!-- Project 1: GPT React Chat -->
-          <article class="card" aria-label="GPT React Chat project">
-            <h3 class="card__title">GPT React Chat</h3>
-            <p class="card__description">AI-powered chat interface integrating the OpenAI API with a React frontend. Features a dynamic conversational UI with real-time message streaming and clean component architecture.</p>
+          <article class="card" aria-label="Moggers digital closet app">
+            <h3 class="card__title">Moggers — Digital Closet</h3>
+            <p class="card__description">My current product: a digital closet app to save wardrobe pieces and create outfits, with an AI stylist and affiliate recommendations in progress. iPhone-first, with a responsive web overhaul underway.</p>
             <div class="card__tags">
-              <span class="tag">React</span>
-              <span class="tag">OpenAI API</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">JavaScript</span><span class="tag">AI Stylist</span><span class="tag">Affiliate / E-commerce</span><span class="tag">Mobile-first</span>
             </div>
             <div class="card__links">
-              <!-- Replace with: https://github.com/apulido305/gpt-react-intercom when repo URL is confirmed -->
-              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View GPT React Chat source code on GitHub">GitHub</a>
+              <a href="https://moggers.app" class="btn-secondary" target="_blank" rel="noopener noreferrer">Live App — moggers.app</a>
             </div>
           </article>
 
-          <!-- Project 2: Wynwalls -->
+          <article class="card" aria-label="Mr Pulido study games hub">
+            <h3 class="card__title">Mr. Pulido Study Games Hub</h3>
+            <p class="card__description">App hub for the study games I build for my students at mrpulido.com — card-quiz games for Python, biology, history, ELA, math, spelling, and scripture memory, all playable in the browser.</p>
+            <div class="card__tags">
+              <span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">Education</span><span class="tag">Games</span>
+            </div>
+            <div class="card__links">
+              <a href="https://apulido305.github.io/" class="btn-secondary" target="_blank" rel="noopener noreferrer">Live Hub — mrpulido.com</a>
+              <a href="https://github.com/apulido305/apulido305.github.io" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card" aria-label="Pickwise AI product comparison">
+            <h3 class="card__title">Pickwise — AI Product Comparison</h3>
+            <p class="card__description">AI-powered product comparison web service. The same kind of work as the React real-time price-comparison app I built at UX Consul: live data in, clear comparison out. Repository is private client work, so no public code link.</p>
+            <div class="card__tags">
+              <span class="tag">Python</span><span class="tag">AI</span><span class="tag">React</span><span class="tag">REST APIs</span><span class="tag">Live Data</span>
+            </div>
+            <div class="card__links">
+              <a href="resume.html" class="btn-secondary">See Resume for Details</a>
+            </div>
+          </article>
+
+          <article class="card" aria-label="GPT React Chat project">
+            <h3 class="card__title">GPT React Chat</h3>
+            <p class="card__description">AI-powered chat interface integrating the OpenAI API with a React frontend. Dynamic conversational UI with real-time message streaming and clean component architecture.</p>
+            <div class="card__tags">
+              <span class="tag">React</span><span class="tag">OpenAI API</span><span class="tag">Node.js</span><span class="tag">JavaScript</span>
+            </div>
+            <div class="card__links">
+              <a href="https://github.com/apulido305/gpt-react-intercom" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
           <article class="card" aria-label="Wynwalls Chrome extension project">
             <h3 class="card__title">Wynwalls</h3>
             <p class="card__description">A Chrome extension that surfaces Wynwood street art in Miami on every new tab page. Combines local art discovery with browser customization — built for the Miami community.</p>
             <div class="card__tags">
-              <span class="tag">Chrome Extension</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">CSS</span>
-              <span class="tag">APIs</span>
+              <span class="tag">Chrome Extension</span><span class="tag">JavaScript</span><span class="tag">CSS</span><span class="tag">APIs</span>
             </div>
             <div class="card__links">
-              <!-- Replace with: https://github.com/apulido305/wynwalls when repo URL is confirmed -->
-              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Wynwalls source code on GitHub">GitHub</a>
+              <a href="https://github.com/apulido305/wynwalls" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </article>
 
-          <!-- Project 3: LottaCoin -->
           <article class="card" aria-label="LottaCoin crypto tracker project">
             <h3 class="card__title">LottaCoin</h3>
             <p class="card__description">Crypto price tracker with custom alert functionality. Pulls live market data and lets users set price thresholds for notifications. Clean, fast, and data-driven.</p>
             <div class="card__tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Ruby</span>
-              <span class="tag">APIs</span>
-              <span class="tag">Live Data</span>
+              <span class="tag">JavaScript</span><span class="tag">Ruby</span><span class="tag">APIs</span><span class="tag">Live Data</span>
             </div>
             <div class="card__links">
-              <!-- Replace with: https://github.com/apulido305/LottaCoin when repo URL is confirmed -->
-              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View LottaCoin source code on GitHub">GitHub</a>
+              <a href="https://github.com/apulido305/LottaCoin" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </article>
 
-          <!-- Project 4: Trio Project -->
           <article class="card" aria-label="Trio Project — Urban Miami e-commerce">
             <h3 class="card__title">Trio Project — Urban Miami</h3>
             <p class="card__description">A collaborative three-person e-commerce platform built on Rails. Features Stripe payment integration, Cloudinary image hosting, and a full product and user management system.</p>
             <div class="card__tags">
-              <span class="tag">Ruby on Rails</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Stripe</span>
-              <span class="tag">Cloudinary</span>
-              <span class="tag">jQuery</span>
+              <span class="tag">Ruby on Rails</span><span class="tag">PostgreSQL</span><span class="tag">Stripe</span><span class="tag">Cloudinary</span><span class="tag">jQuery</span>
             </div>
             <div class="card__links">
-              <!-- Replace with: https://github.com/apulido305/trio-project when repo URL is confirmed -->
-              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Trio Project source code on GitHub">GitHub</a>
+              <a href="https://github.com/apulido305/trio-project" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </article>
 
-          <!-- Project 5: Portfolio Site -->
           <article class="card" aria-label="Portfolio site project">
-            <h3 class="card__title">Portfolio Site</h3>
-            <p class="card__description">This portfolio — designed and built from scratch with a dark minimal aesthetic. Static HTML/CSS with a focus on performance, accessibility, and clean code. No frameworks, no bloat.</p>
+            <h3 class="card__title">This Portfolio Site</h3>
+            <p class="card__description">This portfolio — designed and built from scratch with a dark minimal aesthetic. Static HTML/CSS with a focus on performance, accessibility, and clean code. No frameworks, no bloat. Now with a resume page and this full project archive.</p>
             <div class="card__tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">GitHub Pages</span>
             </div>
             <div class="card__links">
-              <!-- Replace with: https://github.com/apulido305/portfolio-site when repo URL is confirmed -->
-              <a href="https://github.com/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="View Portfolio Site source code on GitHub">GitHub</a>
+              <a href="https://github.com/apulido305/apulido305-portfolio" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </article>
 
@@ -138,25 +158,107 @@
       </div>
     </section>
 
-    <!-- ===== CTA ===== -->
+    <section class="section section--surface" id="client-demos">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Client Demos</h2>
+          <p class="section__subtitle">Bilingual, mobile-first demo sites for local businesses. Previews are passcode-protected for the client — ask me for access.</p>
+        </div>
+        <div class="project-grid">
+          <article class="card" aria-label="Sunset Chiropractic demo">
+            <h3 class="card__title">Sunset Chiropractic Demo</h3>
+            <p class="card__description">Bilingual demo site for a Miami chiropractic practice. Passcode-protected preview.</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Bilingual</span><span class="tag">Mobile-first</span></div>
+            <div class="card__links"><a href="https://github.com/apulido305/sunset-chiropractic-demo" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+          </article>
+          <article class="card" aria-label="Renegade Powerboats demo">
+            <h3 class="card__title">Renegade Powerboats Demo</h3>
+            <p class="card__description">Password-protected demo preview for Renegade Power Boats. Encrypted output only in the public repo.</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Demo</span></div>
+            <div class="card__links"><a href="https://github.com/apulido305/renegade-powerboats-demo" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+          </article>
+          <article class="card" aria-label="Neuropathy Relief Center of Miami demo">
+            <h3 class="card__title">Neuropathy Relief Center of Miami Demo</h3>
+            <p class="card__description">Bilingual demo site for the Neuropathy Relief Center of Miami. Passcode-protected preview.</p>
+            <div class="card__tags"><span class="tag">HTML</span><span class="tag">Bilingual</span><span class="tag">Mobile-first</span></div>
+            <div class="card__links"><a href="https://github.com/apulido305/neuropathy-relief-miami-demo" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="study-games">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Study Games — For My Students</h2>
+          <p class="section__subtitle">Browser card-quiz games I build for class. Play them from the hub linked above. Individual game repos are private while students use them in class.</p>
+        </div>
+        <div class="project-grid">
+          <article class="card"><h3 class="card__title">Spelling</h3><p class="card__description">Spelling practice app in TypeScript.</p><div class="card__tags"><span class="tag">TypeScript</span><span class="tag">Education</span></div><div class="card__links"><a href="https://github.com/apulido305/spelling" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div></article>
+          <article class="card"><h3 class="card__title">Multiplication Flashcards</h3><p class="card__description">Flashcard game for learning the 1–12 multiplication tables.</p><div class="card__tags"><span class="tag">TypeScript</span><span class="tag">Education</span></div><div class="card__links"><a href="https://github.com/apulido305/multiplication" class="btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div></article>
+          <article class="card"><h3 class="card__title">Arcade Collection</h3><p class="card__description">Code Arcade (intro Python), Elemental Arcade, Cell Arcade (biology), History Arcade, Bible Arcade (NIV memory verses), Library Arcade (grades 6–12 ELA, Florida B.E.S.T.), Math Arcade, Physics Arcade, and EarthSpace — all card-quiz games in JavaScript, playable from the hub.</p><div class="card__tags"><span class="tag">JavaScript</span><span class="tag">Education</span><span class="tag">Games</span></div><div class="card__links"><a href="https://apulido305.github.io/" class="btn-secondary" target="_blank" rel="noopener noreferrer">Play from the Hub</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="archive">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Full Archive — All Public Projects</h2>
+          <p class="section__subtitle">Every public repo, newest first. Private repos (client work and in-class games) are described in the sections above, not linked here.</p>
+        </div>
+        <div class="project-list">
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/apulido305-portfolio" target="_blank" rel="noopener noreferrer">apulido305-portfolio</a></p><p class="project-row__desc">Personal portfolio site — this site, including the resume page.</p><p class="project-row__meta">HTML · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/apulido305.github.io" target="_blank" rel="noopener noreferrer">apulido305.github.io</a></p><p class="project-row__desc">mrpulido.com — app hub for Mr. Pulido's study games.</p><p class="project-row__meta">HTML · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/hub" target="_blank" rel="noopener noreferrer">hub</a></p><p class="project-row__desc">Hub site for my apps and projects.</p><p class="project-row__meta">HTML · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/renegade-powerboats-demo" target="_blank" rel="noopener noreferrer">renegade-powerboats-demo</a></p><p class="project-row__desc">Password-protected demo preview (encrypted output only).</p><p class="project-row__meta">HTML · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/sunset-chiropractic-demo" target="_blank" rel="noopener noreferrer">sunset-chiropractic-demo</a></p><p class="project-row__desc">Passcode-protected preview: Sunset Chiropractic bilingual demo.</p><p class="project-row__meta">HTML · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/neuropathy-relief-miami-demo" target="_blank" rel="noopener noreferrer">neuropathy-relief-miami-demo</a></p><p class="project-row__desc">Passcode-protected preview: Neuropathy Relief Center of Miami bilingual demo.</p><p class="project-row__meta">HTML · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/spelling" target="_blank" rel="noopener noreferrer">spelling</a></p><p class="project-row__desc">Spelling practice app.</p><p class="project-row__meta">TypeScript · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/multiplication" target="_blank" rel="noopener noreferrer">multiplication</a></p><p class="project-row__desc">Flashcard game for learning the 1–12 multiplication tables.</p><p class="project-row__meta">TypeScript · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/epic-universe-may9" target="_blank" rel="noopener noreferrer">epic-universe-may9</a></p><p class="project-row__desc">Epic Universe trip site, May 2026.</p><p class="project-row__meta">HTML · 2026</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/gpt-react-intercom" target="_blank" rel="noopener noreferrer">gpt-react-intercom</a></p><p class="project-row__desc">GPT React Chat — AI chat interface with the OpenAI API.</p><p class="project-row__meta">2023</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/elavon" target="_blank" rel="noopener noreferrer">elavon</a></p><p class="project-row__desc">Payment integration work in PHP.</p><p class="project-row__meta">PHP · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/LottaCoin" target="_blank" rel="noopener noreferrer">LottaCoin</a></p><p class="project-row__desc">Crypto tracker with custom alerts.</p><p class="project-row__meta">Ruby · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/todoList" target="_blank" rel="noopener noreferrer">todoList</a></p><p class="project-row__desc">Todo list app in Ruby.</p><p class="project-row__meta">Ruby · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/ajax-demo" target="_blank" rel="noopener noreferrer">ajax-demo</a></p><p class="project-row__desc">Page demonstrating the use of AJAX to query an API.</p><p class="project-row__meta">HTML · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/trio-project" target="_blank" rel="noopener noreferrer">trio-project</a></p><p class="project-row__desc">Collaborative e-commerce platform — Rails, Stripe, Cloudinary.</p><p class="project-row__meta">Ruby · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/wynwalls" target="_blank" rel="noopener noreferrer">wynwalls</a></p><p class="project-row__desc">Wynwalls Google Chrome extension — Wynwood street art on every new tab.</p><p class="project-row__meta">JavaScript · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/hardmode" target="_blank" rel="noopener noreferrer">hardmode</a></p><p class="project-row__desc">Hardmode answer for Wyncode.</p><p class="project-row__meta">Ruby · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/catsta-app" target="_blank" rel="noopener noreferrer">catsta-app</a></p><p class="project-row__desc">Cat photo app in Ruby.</p><p class="project-row__meta">Ruby · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/nba_standings" target="_blank" rel="noopener noreferrer">nba_standings</a></p><p class="project-row__desc">NBA standings app in Ruby.</p><p class="project-row__meta">Ruby · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/rising-sun-js" target="_blank" rel="noopener noreferrer">rising-sun-js</a></p><p class="project-row__desc">Rising Sun JS demo.</p><p class="project-row__meta">JavaScript · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/toodoo" target="_blank" rel="noopener noreferrer">toodoo</a></p><p class="project-row__desc">Todo List Rails app.</p><p class="project-row__meta">Ruby · 2018</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/mockup" target="_blank" rel="noopener noreferrer">mockup</a></p><p class="project-row__desc">Mockup project done at Wyncode Academy.</p><p class="project-row__meta">HTML · 2017</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/portfolio-site" target="_blank" rel="noopener noreferrer">portfolio-site</a></p><p class="project-row__desc">Earlier portfolio site.</p><p class="project-row__meta">HTML · 2017</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/c21-projects" target="_blank" rel="noopener noreferrer">c21-projects</a></p><p class="project-row__desc">Projects created at Wyncode during Cohort 21.</p><p class="project-row__meta">Ruby · 2017</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/gitc21" target="_blank" rel="noopener noreferrer">gitc21</a></p><p class="project-row__desc">Repo for educational purposes.</p><p class="project-row__meta">Ruby · 2017</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/rails_tutorial" target="_blank" rel="noopener noreferrer">rails_tutorial</a></p><p class="project-row__desc">Rails guide tutorial.</p><p class="project-row__meta">Ruby · 2017</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/web_server" target="_blank" rel="noopener noreferrer">web_server</a></p><p class="project-row__desc">First web server.</p><p class="project-row__meta">Ruby · 2017</p></div>
+          <div class="project-row"><p class="project-row__name"><a href="https://github.com/apulido305/hotelMe" target="_blank" rel="noopener noreferrer">hotelMe</a></p><p class="project-row__desc">Simple Rails app for Wyncode.</p><p class="project-row__meta">Ruby · 2017</p></div>
+        </div>
+        <p class="note" style="margin-top: var(--space-8);">Moggers, Pickwise, and the Arcade games live in private repos — Moggers is live at moggers.app, Pickwise is described on my resume, and the Arcade games are playable from the Mr. Pulido hub above. Want code access to a private project for a hiring review? Email me and I can share it.</p>
+      </div>
+    </section>
+
     <section class="section section--no-top section--centered" aria-label="Contact call to action">
       <div class="container">
         <div class="divider"></div>
         <p class="section-heading heading--spaced">Have a project in mind?</p>
-        <p class="cta-text">I'm available for freelance work. Let's talk about what you're building.</p>
-        <a href="contact.html" class="btn-primary">Get In Touch</a>
+        <p class="cta-text">I'm available for part-time remote work — evenings and weekends, EST. Let's talk about what you're building.</p>
+        <a href="resume.html" class="btn-primary">View My Resume</a>
+        <a href="contact.html" class="btn-secondary" style="margin-left: var(--space-4);">Get In Touch</a>
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <nav class="footer__links" aria-label="Footer links">
         <a href="https://github.com/apulido305" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/apulido305" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="mailto:admnslog@gmail.com">admnslog@gmail.com</a>
+        <a href="mailto:rhema305@gmail.com">rhema305@gmail.com</a>
       </nav>
       <p class="footer__copy">&copy; <span id="year"></span> Antonio Pulido. All rights reserved.</p>
     </div>
