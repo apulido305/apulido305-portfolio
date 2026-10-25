@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Antonio Pulido | Full Stack Developer, Miami</title>
+  <meta name="description" content="Antonio Pulido is a Miami-based full stack developer with 10+ years of experience in React, Node.js, TypeScript, Shopify, and WordPress. Available for part-time remote work, evenings and weekends, EST.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .resume-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; margin-top: var(--space-6); font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .resume-meta a { color: var(--color-primary); }
+    .resume-meta span + span::before { content: "·"; margin-right: var(--space-3); color: var(--color-border); }
+    .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+    @media (min-width: 768px) { .stat-grid { grid-template-columns: repeat(4, 1fr); } }
+    .stat { background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center; }
+    .stat__num { font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 700; color: var(--color-primary); line-height: 1.1; }
+    .stat__label { font-size: var(--text-sm); color: var(--color-text-muted); margin-top: var(--space-2); line-height: 1.5; }
+    .job { background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-8); margin-bottom: var(--space-6); }
+    .job__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2); align-items: baseline; margin-bottom: var(--space-2); }
+    .job__title { font-family: var(--font-heading); font-size: var(--text-xl); font-weight: 700; }
+    .job__date { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-primary); white-space: nowrap; }
+    .job__org { color: var(--color-text-muted); margin-bottom: var(--space-4); }
+    .job ul { list-style: disc; padding-left: var(--space-6); display: flex; flex-direction: column; gap: var(--space-2); color: var(--color-text); }
+    .job ul li { line-height: 1.6; }
+    .job ul li::marker { color: var(--color-primary); }
+    .skills-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-8); }
+    @media (min-width: 768px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+    .skills-group__label { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-4); }
+    .skills-group__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+    @media print {
+      .nav, .hero__actions, .footer, .no-print { display: none !important; }
+      body { background: #fff; color: #111; }
+      .hero { min-height: auto; padding-top: 0; }
+      .stat, .job { border-color: #ccc; background: #fff; }
+      .stat__num, .job__date { color: #000; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Skip to main content</a>
+
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container">
+        <a href="index.html" class="nav-logo" aria-label="Antonio Pulido — Home">AP</a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html" aria-current="page" class="active">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero hero--short" id="resume">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Resume · Available for part-time remote work</p>
+          <h1 class="hero__title">Antonio Pulido</h1>
+          <p class="hero__sub">Full Stack Developer — React, Node.js, TypeScript, Shopify &amp; WordPress. 10+ years shipping production web apps, leading dev teams, and running support at scale. Available evenings &amp; weekends, EST.</p>
+          <div class="resume-meta">
+            <span>Miami, FL</span>
+            <span><a href="mailto:rhema305@gmail.com">rhema305@gmail.com</a></span>
+            <span><a href="tel:+17862991435">786-299-1435</a></span>
+            <span><a href="https://www.linkedin.com/in/apulido305" target="_blank" rel="noopener noreferrer">linkedin.com/in/apulido305</a></span>
+          </div>
+          <div class="hero__actions" style="margin-top: var(--space-8);">
+            <a href="mailto:rhema305@gmail.com" class="btn-primary">Email Me</a>
+            <a href="contact.html" class="btn-secondary">Get In Touch</a>
+            <button type="button" class="btn-secondary no-print" onclick="window.print()">Print / Save as PDF</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--no-top" id="results">
+      <div class="container">
+        <div class="stat-grid">
+          <div class="stat"><div class="stat__num">10+</div><div class="stat__label">years building for the web</div></div>
+          <div class="stat"><div class="stat__num">$250K</div><div class="stat__label">saved per year on a provider migration</div></div>
+          <div class="stat"><div class="stat__num">1,200+</div><div class="stat__label">support requests handled per year</div></div>
+          <div class="stat"><div class="stat__num">35%</div><div class="stat__label">faster ticket resolution with a centralized helpdesk</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--no-top" id="summary">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Summary</h2>
+        </div>
+        <p class="bio-text">Dynamic Full Stack Developer with 10+ years of experience creating user-focused, responsive web applications and maintaining robust client solutions. Built a React app for real-time price comparison consuming third-party API data, plus web scrapers and data-extraction pipelines for client data needs.</p>
+        <p class="bio-text">Strongest where code meets customers: I build the feature, fix the bug, and answer the ticket. I have led teams of 5–10, managed 500+ devices, and cut IT overhead 20% while keeping systems secure and users unblocked. Seeking part-time remote web development, support, or QA work — evenings and weekends, EST — where I can ship reliably from day one.</p>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="skills">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__subtitle">The stack I use to ship, support, and test production sites.</p>
+        </div>
+        <div class="skills-grid">
+          <div>
+            <p class="skills-group__label">Frontend</p>
+            <div class="skills-group__tags">
+              <span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">React Native</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">AngularJS</span><span class="tag">jQuery</span><span class="tag">UX/UI Design</span><span class="tag">SEO</span>
+            </div>
+          </div>
+          <div>
+            <p class="skills-group__label">Backend &amp; Data</p>
+            <div class="skills-group__tags">
+              <span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">REST APIs</span><span class="tag">Web Scraping</span><span class="tag">OOP</span><span class="tag">Unit Testing</span>
+            </div>
+          </div>
+          <div>
+            <p class="skills-group__label">E-commerce &amp; CMS</p>
+            <div class="skills-group__tags">
+              <span class="tag">Shopify (Liquid)</span><span class="tag">WordPress</span>
+            </div>
+          </div>
+          <div>
+            <p class="skills-group__label">Cloud, Tools &amp; Support</p>
+            <div class="skills-group__tags">
+              <span class="tag">AWS</span><span class="tag">Google Cloud (GCP)</span><span class="tag">Azure</span><span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">Windows</span><span class="tag">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Experience</h2>
+          <p class="section__subtitle">Production work, team leadership, and support — most recent first.</p>
+        </div>
+
+        <article class="job">
+          <div class="job__head"><h3 class="job__title">Programming &amp; Robotics Instructor</h3><span class="job__date">2023 — Present</span></div>
+          <p class="job__org">Pneuma Christian Academy · Miami, FL</p>
+          <ul>
+            <li>Develop and deliver comprehensive programming and robotics curricula through hands-on projects, building a strong foundation in STEM concepts.</li>
+            <li>Coordinate the school robotics club, guiding student teams through competitions and fostering collaboration, technical skill, and enthusiasm for engineering.</li>
+            <li>Facilitate coding workshops and interactive demonstrations, enabling students to apply theory to real-world scenarios and cultivate computational thinking.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job__head"><h3 class="job__title">Full Stack Developer</h3><span class="job__date">Oct 2017 — May 2023</span></div>
+          <p class="job__org">UX Consul Inc. · Miami, FL</p>
+          <ul>
+            <li>Developed a React app for real-time price comparison consuming third-party API data, enhancing data-driven decision-making.</li>
+            <li>Built web scrapers and data-extraction pipelines for client data needs.</li>
+            <li>Built and maintained 5+ client websites from design documents and UX specs, ensuring accurate implementation of layouts, functionality, and security standards.</li>
+            <li>Integrated RESTful APIs and third-party authentication services into client platforms, expanding features while maintaining robust security.</li>
+            <li>Managed long-term site maintenance, performance improvements, and feature updates across multiple client accounts, coordinating with designers and stakeholders to deliver on schedule.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job__head"><h3 class="job__title">Web Developer</h3><span class="job__date">Sep 2020 — Feb 2021</span></div>
+          <p class="job__org">Nature Consulting · Hollywood, FL</p>
+          <ul>
+            <li>Redesigned website UX/UI and overall visual identity, improving user engagement.</li>
+            <li>Implemented Shopify Liquid templating, streamlining e-commerce site customization.</li>
+            <li>Led a 6-person web development team, ensuring timely project delivery and quality standards.</li>
+            <li>Implemented website security measures including firewalls and message encryption, and integrated third-party APIs for seamless data exchange.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job__head"><h3 class="job__title">Web Developer</h3><span class="job__date">Sep 2018 — Apr 2019</span></div>
+          <p class="job__org">Argaman Communications · Brickell, FL</p>
+          <ul>
+            <li>Managed a 5-person team of developers and UX designers, increasing project efficiency.</li>
+            <li>Developed client websites, improving functionality and user experience, and built and deployed HTML/CSS/JavaScript email marketing campaigns.</li>
+            <li>Integrated data from back-end services and managed content across client platforms.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job__head"><h3 class="job__title">IT Manager</h3><span class="job__date">May 2013 — Oct 2017</span></div>
+          <p class="job__org">King Jesus International Ministry · Miami, FL</p>
+          <ul>
+            <li>Managed a team of 10 technicians and oversaw 500+ devices across the organization, handling over 1,200 support requests annually.</li>
+            <li>Reduced IT overhead by 20% through budget optimization and process improvements.</li>
+            <li>Assisted in migrating internet and wireless services to a new provider, saving over $250K annually, and managed Google Cloud (GCP) infrastructure to optimize cloud operations.</li>
+            <li>Streamlined IT ticket resolution by adopting a centralized helpdesk system, decreasing average response and resolution time by 35%.</li>
+            <li>Recruited, trained, and mentored staff, reducing employee turnover, and ensured security of data, network access, and backup systems.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job__head"><h3 class="job__title">IT Technician</h3><span class="job__date">Jul 2008 — Jan 2013</span></div>
+          <p class="job__org">Renegade Power Boats · Miami, FL</p>
+          <ul>
+            <li>Maintained IT infrastructure, ensuring seamless daily operations, and served as primary contact for all hardware and software issues.</li>
+            <li>Managed web and social media presence, increasing brand visibility and engagement, and evaluated new hardware/software while maintaining technical documentation.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="education">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Education &amp; Awards</h2>
+        </div>
+        <div class="job">
+          <div class="job__head"><h3 class="job__title">Computer Science (in progress)</h3><span class="job__date">2023 — Present</span></div>
+          <p class="job__org">Miami Dade College · Miami, FL</p>
+        </div>
+        <div class="job">
+          <div class="job__head"><h3 class="job__title">Full Stack Web Developer Bootcamp</h3><span class="job__date">Nov 2017 — Feb 2018</span></div>
+          <p class="job__org">Wyncode Academy · Miami, FL</p>
+          <ul>
+            <li>Spirit of Wyncode Award</li>
+            <li>Best App Award</li>
+          </ul>
+        </div>
+        <p class="bio-text" style="margin-top: var(--space-6);">Portfolio: <a href="https://apulido305.github.io/apulido305-portfolio">apulido305.github.io/apulido305-portfolio</a> · GitHub: <a href="https://github.com/apulido305">github.com/apulido305</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="availability">
+      <div class="container">
+        <div class="availability-card">
+          <p class="availability-card__label">Availability</p>
+          <p class="availability-card__text">Part-time remote work — evenings and weekends, Eastern Time. Available to start quickly. Best fit: React / Node.js / TypeScript development, Shopify &amp; WordPress maintenance, technical support, and QA testing.</p>
+          <div class="hero__actions" style="margin-top: var(--space-6); justify-content: flex-start;">
+            <a href="mailto:rhema305@gmail.com" class="btn-primary">Hire Me — Email Antonio</a>
+            <a href="https://www.linkedin.com/in/apulido305" class="btn-secondary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <nav class="footer__links" aria-label="Footer links">
+        <a href="https://github.com/apulido305" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/apulido305" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:rhema305@gmail.com">rhema305@gmail.com</a>
+      </nav>
+      <p class="footer__copy">&copy; <span id="year"></span> Antonio Pulido. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
